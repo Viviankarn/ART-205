@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Chapel</title>
+    <link rel="stylesheet" href="./styleSheet/style.css">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* header styling */
+
+header{
+    background: black;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 80px;
+    position: sticky;
+    z-index: 99;
+}
+
+.header__container{
+    margin: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo span{
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-color: gold;
+    background-image: linear-gradient(to right, red 0%, red 2%, gold 100%);
+}
+
+.logo{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav li{
+    padding: 0 8px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: rgb(192, 182, 182);
+    font-size: 1.3rem;
+}
+
+/* main styling */
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background: rgb(201, 190, 190);
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.you{
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-color: gold;
+    background-image: linear-gradient(to right, red 0%, red 2%, gold 100%);
+}
+
+
+.main__container{
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.main__container h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main__container h2{
+    font-size: 2rem;
+}
+
+.main__container h3{
+    font-size: 4rem;
+}
+
+/* services styling */
+
+.section{
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    text-align: center;
+    margin: 7rem auto;
+}
+
+.service__title{
+    font-size: 3rem;
+}
+
+.service__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.service__card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service__card{
+    width: 350px;
+    height: 450px;
+    padding: 4px 2rem;
+    text-align: start;
+}
+
+.service__card img{
+    width: 300px;
+    border-radius: 3px;
+}
+
+.service__card h3{
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+.service__card button{
+    padding: 8px 22px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgba(255, 102, 0, 0.692);
+
+
+}
+
+/* footerStyling */
+
+.footer{
+    background: black;
+    width: 100%;
+    height: 40vh;
+}
+
+.footer__container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin: 2rem 4rem;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+.footer__card{
+    color: #fff;
+}
+
+.social__media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social__media h2{
+    color: #fff;
+    margin-top: 5rem;
+    margin-bottom: 1rem;;
+}
+.social__media a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.copy__right{
+    color: rgb(212, 203, 203);
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+/* about page Styling */
+
+.about{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: url(../img/holychapel\ .jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.about__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.about__card{
+    width: 450px;
+    height: 500px;
+    margin: 6rem auto;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 2rem 4rem;
+}
+
+form{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+ form :nth-child(1){
+     padding: 18px 10px;
+     border: none;
+     border-radius: 4px;
+     height: 3rem;
+     font-size: 1.2rem;
+     outline: none;
+ }
+ form :nth-child(2){
+     padding: 18px 10px;
+     border: none;
+     border-radius: 4px;
+     height: 3rem;
+     font-size: 1.2rem;
+     margin-top: .58rem;
+     outline: none;
+ }
+
+ .about__message{
+     margin-top: .5rem;
+     height: 12rem;
+     border: none;
+     border-radius: 4px;
+     display: flex;
+     width: 100%;
+     padding-bottom:9rem ;
+     outline: none;
+     font-size: 1.2rem;
+     padding-left: 10px;
+ }
+ 
+
+ form button{
+     margin-top: .5rem;
+     width: 9rem;
+     height: 3.2rem;
+     text-align: center;
+     padding: 0 3rem;
+     border:none;
+     border-radius: 4px;
+     outline: none;
+     font-size: 1.1rem;
+
+ }
+
+ /* activities styling */
+
+ .activities__banner{
+     
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(0,0,0,0.9);
+ }
+
+ .activities__container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     height: 100%;
+     margin: 0 auto;
+
+ }
+
+ .activities__container h2{
+     font-size: 4rem;
+ }
+
+ .activities__container h3{
+     color: #fff;
+     font-size: 2rem;
+     padding: 1.1rem 0;
+ }
+
+ .activities__container p {
+     font-size: 1.1rem;
+     color: black;
+     font-weight: bold;
+     padding: 1rem 2rem;
+     background-color: rgb(196, 184, 184);
+     border-radius: 2rem;
+ }
+
+ .activities__container h1{
+     font-size: 2.4rem;
+     padding: .3rem 0;
+ }
+
+ .activities__container ul{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .activities__container ul li{
+     padding: 1rem 2rem;
+     list-style: none;
+ }
+
+ .activities__container ul li a{
+     font-size: 2rem;
+     text-decoration: none;
+     background-color: rgba(255, 102, 0, 0.692);
+     color:black;
+     padding: 10px 14px;
+     border: none;
+     border-radius: 5px;
+ }
+
+ .activities__container ul li a:hover{
+    
+
+ }
+
+ /* schelule styling */
+
+ .schedule{
+     width: 100%;
+     height: 80vh;
+     margin: 3rem auto;
+ }
+
+ .schedule__container{
+     width: 100%;
+     display: flex;
+     margin: 0 auto;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+ }
+
+ .schedule__container h2{
+     font-size: 3rem;
+     margin: 3rem auto;
+ }
+
+ .schedule__container h3{
+     font-size: 2rem;
+ }
+
+ .schedule__card-container{
+     display: flex;
+     justify-content: space-between;
+
+ }
+
+ .schedule__card{
+     width: 400px;
+     padding: 3rem 2rem;
+ }li
+
+ /* video styling */
+
+ 
+</style>
+</head>
+<body>
+
+<!-- header -->
+
+    <header>
+      <div class="header__container">
+        <div class="logo">Holy<span>Chapel</span></div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- about main -->
+
+    <div class="about">
+        <div class="about__container">
+            <div class="about__card">
+                <h2>About Us</h2>
+                <p>Holy Chapel was exstablish in the year 2020, and our aim is to teach and spare the Gospel through out the word that souls will be
+                    save for the kingdom of Heaven. We preach Salvation, Santivication and about the Mighty Baptism of the Holy Gost.</p>
+            </div>
+
+            <div class="about__card">
+                <h2>Contact Us</h2>
+
+                <form action="#">
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="text" placeholder="Enter your Email">
+                    <input type="text" placeholder="Enter your Message" class="about__message">
+                    <button class="submit">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <section class="video">
+        <div class="video__container">
+            <h1>Our Previous Sermon</h1>
+            <div class="video__card-container">
+                <video src="Holy Chapel  sermon.mp4" width="250px" height="250px" controls></video>
+                <video src="Holy Chapel  sermon.mp4" width="250px" height="250px" controls></video>
+                <video src="Holy Chapel  sermon.mp4" width="250px" height="250px" controls></video>
+            </div>
+
+        </div>
+    </section>
+
+ <!-- footer -->
+ <footer class="footer">
+     <div class="footer__container">
+         <div class="footer__card">
+             <h3>18th Street Beach side sinkor</h3>
+             <p>Monrovia Liberia</p>
+         </div>
+
+         <div> <div class="logo">Holy<span>Chapel</span></div></div>
+
+         <div class="social__media">
+             <h2>Social Media</h2>
+             <a href="#">Facebook</a>
+             <a href="#">Whatsapp</a>
+             <a href="#">Twotter</a>
+             <a href="#">Instagram</a>
+         </div>
+     </div>
+
+     <div class="copy__right">&copy Holy Chapel intyernational Ministr 2020, All right Reserved,</div>
+ </footer>
+
+</body>
+</html>
